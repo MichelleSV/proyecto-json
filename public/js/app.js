@@ -60,7 +60,7 @@ var plantilla2 = '<div class="row">'+
 		'</div>'+
 	'</div>';
 $(document).ready(function(){
-	$.getJSON("http://swapi.co/api/species/", function(response){
+	$.getJSON("https://swapi.co/api/species/", function(response){
 		var especies = "";
 		$.each(response.results, function(i,especie){
 			var value = "";
@@ -80,27 +80,9 @@ $(".container").on("change","#select",function(){
 	$("#contenedor").html("");
 	var numeroURL = $(this).val().split("/");
 	for(var i=0; i<numeroURL.length;i++){
-		$.getJSON("http://swapi.co/api/people/"+numeroURL[i]+"/",function(response){
+		$.getJSON("https://swapi.co/api/people/"+numeroURL[i]+"/",function(response){
 			var plantillaLlena = plantilla2.replace("__name__",response.name);
 			$("#contenedor").append(plantillaLlena);
 		});
 	};
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,12 @@
+#contenedor{
+	margin-top: 20px;
+}
+select{
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 70%;
+}
+.cuadro{
+	width: 70%;
+	display: inline-block;
+}

@@ -51,7 +51,7 @@ $(document).ready(function(){
 var plantilla = '<option class="opcion-especie" value="__valor__">__familia__</option>';
 var plantilla2 = '<div class="row">'+
 	'<div class="col-sm-12 col-md-12">'+
-			'<div class="thumbnail">' +
+			'<div class="thumbnail cuadro">' +
 				'<div class="caption">' +
 					'<h3> Hi, my name is __name__</h3>' +
 					'<p><a data-show-url="__url__" class="btn btn-primary about" role="button">Button</a></p>' +
@@ -66,7 +66,6 @@ $(document).ready(function(){
 			var value = "";
 			var semiURL ="http://swapi.co/api/people/";
 			$.each(especie.people, function(i,url){
-				console.log(url);
 				value += url.replace(semiURL,"");
 			});
 			especies += plantilla
